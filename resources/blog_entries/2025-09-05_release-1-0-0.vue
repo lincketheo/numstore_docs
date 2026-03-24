@@ -16,7 +16,7 @@
 </template>
 
 
-<script lang="ts" setup>
+<script lang="ts">
 export const meta = {
   title: 'Release: NumStore v1.0.0',
   date: '2025-09-05',

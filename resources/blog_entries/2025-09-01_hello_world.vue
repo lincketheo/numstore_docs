@@ -13,7 +13,7 @@
 </template>
 
 
-<script lang="ts" setup>
+<script lang="ts">
 export const meta = {
   title: 'Hello, world',
   date: '2025-09-01',

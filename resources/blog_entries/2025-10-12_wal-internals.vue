@@ -1,11 +1,13 @@
-<script lang="ts" setup>
-import Ref from '../Ref.vue'
-
+<script lang="ts">
 export const meta = {
   title: 'WAL Internals: How NumStore Survives a Crash',
   date: '2025-10-12',
 }
 export const summary = 'A deep dive into NumStore\'s write-ahead log: segment layout, fsync strategies, and how two-phase commit works under the hood.'
+</script>
+
+<script lang="ts" setup>
+import Ref from '../Ref.vue'
 </script>
 
 <template>

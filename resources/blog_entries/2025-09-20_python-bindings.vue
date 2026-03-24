@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script lang="ts">
 export const meta = {
   title: 'Python Bindings: Design Choices and Pitfalls',
   date: '2025-09-20',
