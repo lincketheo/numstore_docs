@@ -17,8 +17,9 @@
 
 
 <script lang="ts" setup>
-const meta = {
+export const meta = {
   title: 'Release: NumStore v1.0.0',
   date: '2025-09-05',
 }
+export const summary = 'NumStore v1.0.0 is out with the core R+ tree engine, write-ahead logging, and Python/Java bindings.'
 </script>

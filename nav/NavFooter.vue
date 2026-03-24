@@ -29,21 +29,6 @@ const groups: Group[] = [
     ]
   },
   {
-    label: 'Services',
-    links: [
-      {text: 'Enterprise Support', href: '/services/enterprise_support'},
-      {text: 'Consulting', href: '/services/consulting'},
-      {text: 'Training', href: '/services/training'}
-    ]
-  },
-  {
-    label: 'Community',
-    links: [
-      {text: 'Bug Reporting', href: '/community/bug_reporting'},
-      {text: 'Forum', href: '/community/forum'}
-    ]
-  },
-  {
     label: 'About',
     links: [
       {text: 'Company', href: '/about/company'},
@@ -57,7 +42,7 @@ const groups: Group[] = [
   <footer class="bg-gray-900 text-gray-300 text-sm">
     <div
         class="max-w-7xl mx-auto py-10 px-4 grid gap-8
-             grid-cols-2 sm:grid-cols-3 md:grid-cols-5"
+             grid-cols-2 sm:grid-cols-3"
     >
       <div v-for="group in groups" :key="group.label">
         <h3 class="font-medium text-gray-100 mb-2">

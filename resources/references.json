@@ -1,0 +1,62 @@
+[
+  {
+    "id": "guttman84",
+    "label": "Guttman 1984",
+    "title": "R-Trees: A Dynamic Index Structure for Spatial Searching",
+    "authors": ["Antonin Guttman"],
+    "venue": "ACM SIGMOD Record",
+    "year": 1984,
+    "url": "https://dl.acm.org/doi/10.1145/971697.602266",
+    "notes": "The original R-tree paper. NumStore's tree layout descends from this design."
+  },
+  {
+    "id": "sellis87",
+    "label": "Sellis et al. 1987",
+    "title": "The R+-Tree: A Dynamic Index for Multi-Dimensional Objects",
+    "authors": ["Timos K. Sellis", "Nick Roussopoulos", "Christos Faloutsos"],
+    "venue": "VLDB",
+    "year": 1987,
+    "url": "https://www.vldb.org/conf/1987/P507.PDF",
+    "notes": "Introduces the R+ tree variant NumStore uses as its core index structure."
+  },
+  {
+    "id": "mohan92",
+    "label": "Mohan et al. 1992",
+    "title": "ARIES: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging",
+    "authors": ["C. Mohan", "Don Haderle", "Bruce Lindsay", "Hamid Pirahesh", "Peter Schwarz"],
+    "venue": "ACM Transactions on Database Systems",
+    "year": 1992,
+    "url": "https://dl.acm.org/doi/10.1145/128765.128770",
+    "notes": "The ARIES recovery algorithm that informs NumStore's WAL design."
+  },
+  {
+    "id": "graefe04",
+    "label": "Graefe 2004",
+    "title": "Write-Optimized B-Trees",
+    "authors": ["Goetz Graefe"],
+    "venue": "VLDB",
+    "year": 2004,
+    "url": "https://www.vldb.org/conf/2004/RS18P2.PDF",
+    "notes": "Covers write-buffering techniques considered during WAL segment design."
+  },
+  {
+    "id": "sqlite-wal",
+    "label": "SQLite WAL",
+    "title": "Write-Ahead Logging",
+    "authors": ["D. Richard Hipp"],
+    "venue": "SQLite Documentation",
+    "year": 2010,
+    "url": "https://www.sqlite.org/wal.html",
+    "notes": "SQLite's WAL design heavily influenced NumStore's segment layout and checkpointing strategy."
+  },
+  {
+    "id": "o-neil96",
+    "label": "O'Neil et al. 1996",
+    "title": "The Log-Structured Merge-Tree (LSM-Tree)",
+    "authors": ["Patrick O'Neil", "Edward Cheng", "Dieter Gawlick", "Elizabeth O'Neil"],
+    "venue": "Acta Informatica",
+    "year": 1996,
+    "url": "https://link.springer.com/article/10.1007/s002360050048",
+    "notes": "LSM-tree reference point for write-amplification trade-offs; NumStore's R+ tree takes a different approach."
+  }
+]

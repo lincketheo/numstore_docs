@@ -1,51 +1,30 @@
+<script lang="ts" setup>
+import manifest from './blog_entries/manifest.json'
+
+// Manifest is already sorted newest-first; nothing else needed.
+const posts = manifest
+</script>
+
 <template>
-  <main class="max-w-3xl mx-auto px-6 py-12">
-    <h1 class="text-2xl font-bold mb-4">NumStore Blog</h1>
-    <ul class="space-y-4 list-disc pl-6">
-      <li v-for="post in posts" :key="post.slug" class="space-y-1">
-        <div>
-          <RouterLink :to="`/resources/blog/${post.slug}`" class="underline">
-            {{ post.meta.title }}
+  <main class="max-w-3xl mx-auto px-6 py-12 space-y-8">
+    <h1 class="text-3xl font-bold">NumStore Blog</h1>
+    <p class="text-gray-600">
+      Release notes, internals deep-dives, and performance notes.
+    </p>
+
+    <ul class="space-y-6 divide-y">
+      <li v-for="post in posts" :key="post.slug" class="pt-6 first:pt-0 space-y-1">
+        <div class="flex items-baseline gap-3">
+          <RouterLink
+            :to="`/resources/blog/${post.slug}`"
+            class="text-lg font-semibold underline hover:text-gray-600"
+          >
+            {{ post.title }}
           </RouterLink>
-          <span class="text-sm text-gray-600"> — {{ post.meta.date }}</span>
+          <span class="text-sm text-gray-500 shrink-0">{{ post.date }}</span>
         </div>
-        <p class="text-sm">{{ post.summary }}</p>
+        <p class="text-gray-700 text-sm">{{ post.summary }}</p>
       </li>
     </ul>
   </main>
 </template>
-
-<script lang="ts" setup>
-
-interface Meta {
-  title: string;
-  date: string
-}
-
-interface EntryModule {
-  default: any;
-  meta?: Meta;
-  summary?: string
-}
-
-const modules = import.meta.glob('./blog_entries/*.vue', {eager: true}) as Record<string, EntryModule>
-
-function byDateDesc(a: string, b: string): number {
-// Prefer meta.date if present; otherwise, parse leading YYYY-MM-DD from filename
-  const am = modules[a].meta?.date || a.match(/(\d{4}-\d{2}-\d{2})/)?.[1] || '1970-01-01'
-  const bm = modules[b].meta?.date || b.match(/(\d{4}-\d{2}-\d{2})/)?.[1] || '1970-01-01'
-  return am < bm ? 1 : am > bm ? -1 : 0
-}
-
-const posts = Object.keys(modules)
-    .sort(byDateDesc)
-    .map((path) => {
-      const slug = path.split('/').pop()!.replace('.vue', '')
-      const mod = modules[path]
-      return {
-        slug,
-        meta: mod.meta || {title: slug, date: slug.slice(0, 10)},
-        summary: mod.summary || '',
-      }
-    })
-</script>

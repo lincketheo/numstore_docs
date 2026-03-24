@@ -14,8 +14,9 @@
 
 
 <script lang="ts" setup>
-const meta = {
+export const meta = {
   title: 'Hello, world',
   date: '2025-09-01',
 }
+export const summary = 'NumStore now has a blog. Expect concise posts on releases, performance notes, and low-level internals.'
 </script>
