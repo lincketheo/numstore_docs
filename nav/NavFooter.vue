@@ -61,8 +61,8 @@ const groups: Group[] = [
         </ul>
       </div>
     </div>
-    <div class="bg-green-300 text-center text-black text-sm">
-      Copyright © 2001-2025, The Company LLC.
+    <div class="bg-green-300 text-center text-black text-sm py-1">
+      Copyright &copy; 2025 NumStore. All rights reserved.
     </div>
   </footer>
 </template>

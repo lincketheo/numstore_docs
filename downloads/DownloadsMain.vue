@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-
+import { useRouter } from 'vue-router'
+useRouter().replace('/downloads/current')
 </script>
-
-<template>
-  Downloads
-</template>
-
-<style scoped>
-
-</style>
+<template></template>

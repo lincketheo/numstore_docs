@@ -5,8 +5,8 @@
       <h1 class="text-3xl font-bold">Documentation</h1>
       <p class="text-gray-700">
         NumStore is a numeric-first embedded database built for systems workloads. It exposes a simple
-        key/value interface over an R+ tree core and ships with a write-ahead log, Python bindings, and
-        Java bindings.
+        key/value interface over an R+ tree core <Ref id="sellis87" /> and ships with a write-ahead
+        log <Ref id="sqlite-wal" />, Python bindings, and Java bindings.
       </p>
     </section>
 
@@ -96,8 +96,8 @@ fill_factor   = 0.75     # target fill ratio on splits</code></pre>
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold border-b pb-2">Transactions &amp; WAL</h2>
       <p class="text-gray-700">
-        Every write goes through the write-ahead log before being applied to the tree. NumStore
-        supports explicit transactions with two-phase commit semantics.
+        Every write goes through the write-ahead log <Ref id="mohan92" /> before being applied to the
+        tree. NumStore supports explicit transactions with two-phase commit semantics.
       </p>
       <pre class="bg-gray-900 text-green-300 rounded p-4 overflow-x-auto text-sm"><code>import numstore
 
@@ -185,4 +185,5 @@ db.close()</code></pre>
 
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
+import Ref from './Ref.vue'
 </script>

@@ -1,11 +1,5 @@
 <script lang="ts" setup>
-
+import { useRouter } from 'vue-router'
+useRouter().replace('/resources/documentation')
 </script>
-
-<template>
-  Resources
-</template>
-
-<style scoped>
-
-</style>
+<template></template>
