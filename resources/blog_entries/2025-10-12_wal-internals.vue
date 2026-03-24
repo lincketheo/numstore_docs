@@ -1,19 +1,7 @@
-<script lang="ts">
-export const meta = {
-  title: 'WAL Internals: How NumStore Survives a Crash',
-  date: '2025-10-12',
-}
-export const summary = 'A deep dive into NumStore\'s write-ahead log: segment layout, fsync strategies, and how two-phase commit works under the hood.'
-</script>
-
-<script lang="ts" setup>
-import Ref from '../Ref.vue'
-</script>
-
 <template>
   <article class="prose max-w-3xl mx-auto px-6 py-12">
-    <h1>{{ meta.title }}</h1>
-    <p class="text-gray-500 text-sm">{{ meta.date }}</p>
+    <h1>WAL Internals: How NumStore Survives a Crash</h1>
+    <p class="text-gray-500 text-sm">2025-10-12</p>
 
     <p>
       Every write to NumStore is durable before the caller sees a success response. The mechanism that
@@ -99,3 +87,12 @@ import Ref from '../Ref.vue'
     </p>
   </article>
 </template>
+
+<script lang="ts">
+export const meta = { title: 'WAL Internals: How NumStore Survives a Crash', date: '2025-10-12' }
+export const summary = "A deep dive into NumStore's write-ahead log: segment layout, fsync strategies, and how two-phase commit works under the hood."
+</script>
+
+<script lang="ts" setup>
+import Ref from '../Ref.vue'
+</script>

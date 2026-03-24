@@ -1,15 +1,7 @@
-<script lang="ts">
-export const meta = {
-  title: 'Python Bindings: Design Choices and Pitfalls',
-  date: '2025-09-20',
-}
-export const summary = 'Why we chose ctypes over Cython, how we manage the GIL, and a walkthrough of the Python API surface.'
-</script>
-
 <template>
   <article class="prose max-w-3xl mx-auto px-6 py-12">
-    <h1>{{ meta.title }}</h1>
-    <p class="text-gray-500 text-sm">{{ meta.date }}</p>
+    <h1>Python Bindings: Design Choices and Pitfalls</h1>
+    <p class="text-gray-500 text-sm">2025-09-20</p>
 
     <p>
       When we sat down to write Python bindings for NumStore, the first decision was how to bridge C
@@ -71,3 +63,8 @@ db.close()</code></pre>
     </p>
   </article>
 </template>
+
+<script lang="ts">
+export const meta = { title: 'Python Bindings: Design Choices and Pitfalls', date: '2025-09-20' }
+export const summary = 'Why we chose ctypes over Cython, how we manage the GIL, and a walkthrough of the Python API surface.'
+</script>
